@@ -114,3 +114,13 @@ y_pred = clf.predict(X_test)
 print("Accuracy:", accuracy_score(y_test, y_pred))
 print("Precision:", precision_score(y_test, y_pred))
 print("Recall:", recall_score(y_test, y_pred))
+
+# Test cases from assignment page
+X_sample = np.array([[2, 5], [8, 3], [6, 6]])
+y_sample = np.array([1, 0, 1])
+
+dt_test = ScratchDecisionTreeClassifier(max_depth=2)
+dt_test.tree = dt_test.fit(X_sample, y_sample)
+y_sample_pred = dt_test.predict(X_sample)
+
+print("Test Sample Predictions:", y_sample_pred)
